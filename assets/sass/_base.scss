@@ -1,8 +1,52 @@
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html, 
 body {
-    font-family: $body-font-family;
-    font-weight: $body-font-weight;
-    color: $body-color;
-    line-height: $body-line-height;
-    background-color: $body-bg;
+    min-height: 100svh;
+}
+
+body {
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    color: var(--body-color);
+    line-height: var(--body-line-height);
+    background-color: var(--body-bg);
     text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    width: min(1008px, 100%);
+    margin-inline: auto;
+    background-color: var(--white);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+    @include media('md') {
+        flex-direction: row;
+        border-radius: 20px;
+    }
+}
+
+section {
+    padding-inline: 23px; 
+    padding-block: 39px 32px;
+    flex-basis: 50%;
+}
+
+.section-results {
+    background-color: var(--slate-900);
 }

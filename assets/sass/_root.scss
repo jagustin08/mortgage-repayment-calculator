@@ -1,0 +1,14 @@
+:root {
+    @each $colors, $value in $theme-colors {
+        --#{$colors}: #{$value};
+    }
+
+    --font-plus-jakarta-sans: #{inspect($font-plus-jakarta-sans)};
+    --font-sans-serif: #{inspect($font-sans-serif)};
+    --font-size-base: #{inspect($font-size-base)};
+    --body-font-family: #{inspect($body-font-family)};
+    --body-font-weight: #{inspect($body-font-weight)};
+    --body-color: #{inspect($body-color)};
+    --body-line-height: #{inspect($body-line-height)};
+    --body-bg: #{inspect($body-bg)};
+}

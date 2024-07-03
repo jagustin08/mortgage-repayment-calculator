@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "PlusJakartaSans";
-  src: url("assets/fonts/static/PlusJakartaSans-Medium.ttf") format("ttf");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "PlusJakartaSans";
-  src: url("assets/fonts/static/PlusJakartaSans-Bold.ttf") format("ttf");
-  font-weight: 700;
-  font-style: normal;
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -64,13 +52,81 @@ table {
   border-spacing: 0;
 }
 
-body {
-  font-family: "PlusJakartaSans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 500;
-  color: #122f3f;
-  line-height: 1.5;
-  background-color: #e3f3fd;
-  text-align: left;
+h1,
+h2 {
+  font-size: 18px;
+  font-weight: 700;
 }
 
-/*# sourceMappingURL=styles.css.map */
+:root {
+  --lime: hsl(61, 70%, 52%);
+  --red: hsl(4, 69%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --slate-100: hsl(202, 86%, 94%);
+  --slate-300: hsl(203, 41%, 72%);
+  --slate-500: hsl(200, 26%, 54%);
+  --slate-700: hsl(200, 24%, 40%);
+  --slate-900: hsl(202, 55%, 16%);
+  --font-plus-jakarta-sans: "Plus Jakarta Sans";
+  --font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-size-base: 16px;
+  --body-font-family: "Plus Jakarta Sans";
+  --body-font-weight: 500;
+  --body-color: hsl(202, 55%, 16%);
+  --body-line-height: 1.5;
+  --body-bg: hsl(202, 86%, 94%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100svh;
+}
+
+body {
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  color: var(--body-color);
+  line-height: var(--body-line-height);
+  background-color: var(--body-bg);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  width: min(1008px, 100%);
+  margin-inline: auto;
+  background-color: var(--white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    border-radius: 20px;
+  }
+}
+
+section {
+  padding-inline: 23px;
+  padding-block: 39px 32px;
+  flex-basis: 50%;
+}
+
+.section-results {
+  background-color: var(--slate-900);
+}/*# sourceMappingURL=styles.css.map */
