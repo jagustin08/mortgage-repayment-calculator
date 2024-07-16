@@ -52,6 +52,11 @@ table {
   border-spacing: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 h1,
 h2 {
   font-size: 18px;
@@ -129,4 +134,12 @@ section {
 
 .section-results {
   background-color: var(--slate-900);
+  color: var(--white);
+  border-bottom-left-radius: 73px;
+}
+.section-results img {
+  margin-inline: auto;
+}
+.section-results .result {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

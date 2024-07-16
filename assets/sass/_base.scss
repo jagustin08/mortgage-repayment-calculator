@@ -49,4 +49,14 @@ section {
 
 .section-results {
     background-color: var(--slate-900);
+    color: var(--white);
+    border-bottom-left-radius: 73px;
+
+    img {
+        margin-inline: auto;
+    }  
+
+    .result {        
+        display: none;
+    }
 }
